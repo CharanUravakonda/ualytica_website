@@ -1,0 +1,50 @@
+/* footer.css */
+.site-footer {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+    color: #ffffff;
+    padding: 36px 0;
+}
+
+html[data-theme='light'] .site-footer {
+    color: rgb(255, 255, 255);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 48px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.socials img {
+    width: 34px;
+    height: 34px;
+    filter: grayscale(1);
+    opacity: .9;
+    border-radius: 8px;
+    transition: transform .18s, filter .18s;
+}
+
+.socials img:hover {
+    transform: translateY(-4px);
+    filter: none;
+    opacity: 1;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: .95rem;
+    margin-top: 18px;
+    text-align: center;
+}

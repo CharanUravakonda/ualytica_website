@@ -1,0 +1,177 @@
+/* pages.css - shared */
+.section {
+    padding: 48px 0
+}
+
+.container.narrow {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+html[data-theme='light'] 
+.lead {
+    color: var(--light-body-text);
+    
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 18px
+}
+
+.team-card {
+    text-align: center;
+    background: var(--surface);
+    padding: 16px;
+    border-radius: 10px
+}
+
+.team-card img {
+    width: 84px;
+    margin: 0 auto 8px;
+    opacity: .95
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 18px
+}
+
+.service-card {
+    background: var(--surface);
+    padding: 18px;
+    border-radius: 12px
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    align-items: center
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px
+}
+
+.job {
+    background: var(--surface);
+    padding: 12px;
+    border-radius: 8px
+}
+
+
+html[data-theme='light']
+.contact-form-area{
+    background-color: #0b1220;
+    color: #ffffff;
+}
+
+html[data-theme='light']
+.contact-form-area label{
+    color: #ffffff;
+}
+
+.contact-form-area {
+    /* Form Layout */
+    max-width: 550px; /* Slightly smaller width for better focus */
+    margin: 40px auto; 
+    padding: 30px;
+    
+    /* Aesthetics */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* Slightly more rounded */
+    background-color: #f8f8f8; /* Light gray background */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Stronger shadow for depth */
+}
+
+/* ---------------------------------------------------- */
+/* 2. FIELD GROUPS & LABELS (.form-group) */
+/* ---------------------------------------------------- */
+.form-group {
+    margin-bottom: 25px; /* Adds clean vertical spacing between fields */
+}
+
+.contact-form-area label {
+    display: block;
+    margin-bottom: 8px; /* Space between label and input box */
+    font-size: 14px;
+    font-weight: 700;
+    color: #444; /* Darker text */
+}
+
+/* ---------------------------------------------------- */
+/* 3. INPUT FIELDS (.form-input and .form-textarea) */
+/* ---------------------------------------------------- */
+.form-input,
+.form-textarea {
+    width: 100%; 
+    padding: 12px 15px;
+    
+    /* Field Appearance */
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit; /* Inherit font from body */
+    box-sizing: border-box; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-textarea {
+    resize: vertical; 
+    min-height: 150px; /* Taller message box */
+}
+
+/* Focus State */
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); /* Softer focus glow */
+    outline: none; 
+    background-color: #fff;
+}
+
+/* ---------------------------------------------------- */
+/* 4. BUTTON STYLES (.contact-submit-btn) */
+/* ---------------------------------------------------- */
+
+.form-actions {
+    text-align: right;
+    margin-top: 30px; /* Space above the button */
+}
+
+.contact-submit-btn {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Color Scheme */
+    background-color: #007bff; 
+    color: #ffffff;
+    
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Button depth */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
+}
+
+.contact-submit-btn:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 6px 8px rgba(0, 123, 255, 0.4);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

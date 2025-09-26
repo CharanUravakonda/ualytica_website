@@ -1,0 +1,136 @@
+:root {
+  --bg: #0f1724;
+  --surface: #0b1220;
+  --muted: #ffffff;
+  --accent: #00e0ff;
+  --text: #ffffff;
+  --light-bg: #e4e4e4;
+  --light-surface: #ffffff;
+  --light-text: #ffffff;
+  --light-body-text: #000000;
+}
+
+/* Theme variables will be toggled by JS via data-theme on <html> */
+html[data-theme='light'] {
+  --bg: var(--light-bg);
+  --surface: var(--light-surface);
+  --text: var(--light-body-text);
+  --muted: #556;
+}
+
+header.site-header {
+  position: sticky;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  z-index: 40;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(6px);
+}
+
+html[data-theme='light'] header.site-header {
+  background: linear-gradient(200deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+  --text: var(--light-text);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px
+}
+
+.brand-text {
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.2px
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  align-items: center
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background .18s, color .18s
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--accent)
+}
+
+.hamburger {
+  display: none;
+  border: 0;
+  background: none;
+  padding: 6px;
+  cursor: pointer
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  margin: 4px 0;
+  border-radius: 2px
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px
+}
+
+/* Responsive nav */
+@media (max-width:880px) {
+  .main-nav {
+    position: fixed;
+    inset: auto 0 0 0;
+    background: var(--surface);
+    transform: translateY(100%);
+    transition: transform .28s;
+    box-shadow: 0 -10px 30px rgba(2, 6, 23, 0.6);
+    padding: 18px
+  }
+
+  .main-nav.open {
+    transform: translateY(0)
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px
+  }
+
+  .hamburger {
+    display: block
+  }
+}
